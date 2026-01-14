@@ -31,3 +31,40 @@ node_modules/
 
 # Exception:   Track binding log (governance record)
 !logs/binding.log
+# Python (extended)
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*. egg-info/
+venv/
+env/
+ENV/
+
+# Data and State
+data/
+cache/
+agent-state/
+*.db
+*.sqlite
+
+# AI Models (if stored locally)
+models/
+*.gguf
+*.bin
+*.safetensors
+
+# Testing
+.pytest_cache/
+. coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS (extended)
+Thumbs.db
+.Trash-*
+desktop.ini

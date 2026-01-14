@@ -1,0 +1,78 @@
+version: '3.8'
+
+services:
+  # Ollama - Local LLM inference
+  ollama: 
+    image: ollama/ollama:latest
+    container_name:  aether-ollama
+    ports: 
+      - "11434:11434"
+    volumes: 
+      - ollama-data:/root/.ollama
+    restart: unless-stopped
+    networks: 
+      - aether-net
+    deploy:
+      resources:
+        reservations:
+          devices: 
+            - driver: nvidia
+              count:  all
+              capabilities: [gpu]
+    environment:
+      - OLLAMA_HOST=0.0.0.0
+
+  # Open WebUI - Interface for Ollama
+  open-webui: 
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: aether-webui
+    ports:
+      - "3000:8080"
+    volumes:
+      - open-webui-data:/app/backend/data
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+    depends_on:
+      - ollama
+    restart: unless-stopped
+    networks: 
+      - aether-net
+
+  # Redis - Agent state and cache
+  redis:
+    image: redis:7-alpine
+    container_name:  aether-redis
+    ports: 
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+    networks:
+      - aether-net
+    command: redis-server --appendonly yes
+
+  # PostgreSQL - Agent memory and audit trail
+  postgres:
+    image:  postgres:16-alpine
+    container_name: aether-postgres
+    ports: 
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=aether
+      - POSTGRES_PASSWORD=aether_local_dev
+      - POSTGRES_DB=aethernet
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - aether-net
+
+volumes:
+  ollama-data: 
+  open-webui-data:
+  redis-data: 
+  postgres-data: 
+
+networks:
+  aether-net:
+    driver: bridge
