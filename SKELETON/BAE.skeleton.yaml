@@ -1,0 +1,97 @@
+SKELETON_VERSION: 1.0 AUTHORITY: AETHER LAYER: SKELETON STATUS: ACTIVE
+
+REQUIRED_FIELDS:
+  - BAE_ID
+  - NAME
+  - FUNCTION
+  - DOMAIN
+  - CORE_RESPONSIBILITIES
+  - NON_RESPONSIBILITIES
+  - INPUTS
+  - OUTPUTS
+  - AUTHORITY_LEVEL
+  - CONSTRAINTS
+  - ESCALATION_PATH
+  - STATUS
+
+RULES:
+  - No additional fields permitted
+  - All fields mandatory
+  - No narrative language
+  - No personality encoding
+  - Structure over content
+
+ENFORCEMENT:
+  - Audited by BAE000
+SKELETON_ID: BAE-SKELETON
+VERSION: 1.0
+AUTHORITY: AETHER
+LAYER: SKELETON
+TYPE: STRUCTURAL_SCHEMA
+STATUS: LOCKED
+
+DESIGNATION:
+  NAME: BAE Skeleton Layer
+  FUNCTION: Static schema, structural index, and concision enforcer for all BÆ agents
+
+AUTHORITATIVE_MEANING:
+  - Defines fixed structural columns every BÆ agent must fill
+  - Does not act as an agent, executor, or personality
+  - Enforces scope, boundaries, and consistency
+  - Arbitrates form, not content
+  - Preserves alignment with AETHER, AETHERNET, and Vault:Door:Window
+
+OPERATING_RULES:
+  - No new fields without authorization
+  - No scope inflation
+  - Concise, factual entries only
+  - Versioned and auditable structure
+  - Agents build on top; skeleton remains static
+
+ROLE_LOCK:
+  DEFINES:
+    - Static agent fields
+    - Structural consistency
+    - Scope boundaries
+  DOES_NOT:
+    - Add personality
+    - Expand agent scope
+    - Execute tasks
+    - Compete with agents
+    - Speak as an agent
+
+CANONICAL_AGENT_FIELDS:
+  - Agent_ID
+  - Agent_Name
+  - Function
+  - Domain
+  - Core_Responsibilities
+  - Explicit_Non_Responsibilities
+  - Inputs_Required
+  - Outputs_Produced
+  - Authority_Level
+  - Constraints
+  - Risk_Flags
+  - Interactions
+  - Escalation_Path
+  - Status
+
+RESPONSE_INSTRUCTION:
+  PROMPT:
+    - Fill the BÆ Agent Skeleton only
+    - Do not add fields
+    - Do not exceed scope
+    - Concise, factual, bounded
+
+SYSTEM_PRINCIPLES:
+  - Agents are role-bound operators, not autonomous egos
+  - All agents operate under AETHER
+  - All agents attach to AETHERNET
+  - All agents respect Vault:Door:Window
+  - All agents are sandboxed unless authorized
+
+CHANGE_CONTROL:
+  RECORDED_BY: BAE000
+  ARBITRATED_BY: AETHER
+  - Conflicts escalate to AETHER
+

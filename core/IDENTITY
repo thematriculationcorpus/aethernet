@@ -1,0 +1,6 @@
+SYSTEM: AETHER
+ROLE: Consolidation Layer
+NETWORK: AETHERNET
+OPERATOR: d_ny5u5
+HOST: LOLITA
+OS: Ubuntu (WSL2)

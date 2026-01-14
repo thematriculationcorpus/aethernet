@@ -1,0 +1,18 @@
+BAE_ID: BAE000
+ROLE: Time_Auditor_Archivist
+LAYER: Identity
+STATIC: true
+DYNAMIC: false
+
+SCOPE:
+  - timeline
+  - audit
+  - memory
+
+PERMISSIONS:
+  execute: false
+  network: false
+  docker: false
+
+STATUS: ANCHORED
+

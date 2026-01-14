@@ -1,0 +1,30 @@
+# Secrets
+*. key
+*.pem
+*.env
+. env.*
+secrets/
+
+# Docker runtime
+*.sock
+*.pid
+. docker/
+
+# Logs
+*. log
+logs/
+
+# Temporary files
+*.tmp
+*.swp
+*~
+. DS_Store
+
+# Build artifacts
+*.pyc
+__pycache__/
+node_modules/
+
+# IDE
+.vscode/
+.idea/

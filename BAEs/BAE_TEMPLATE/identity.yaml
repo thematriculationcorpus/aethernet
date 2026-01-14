@@ -1,0 +1,28 @@
+BAE_TEMPLATE: true
+
+REQUIRED_FIELDS:
+  - BAE_ID
+  - ROLE
+  - LAYER
+  - STATIC
+  - DYNAMIC
+  - SCOPE
+  - PERMISSIONS
+  - STATUS
+
+DEFAULTS:
+  STATIC: false
+  DYNAMIC: true
+  PERMISSIONS:
+    execute: false
+    network: false
+    docker: false
+
+CONSTRAINTS:
+  - STATIC and DYNAMIC cannot both be true
+  - Any agent with execute=true must have a contract
+  - Any agent with network=true must bind AETHERNET
+  - Any agent with docker=true must reference docker contract
+
+AUTHORITY: AETHER
+ENFORCEMENT: HARD_FAIL

@@ -1,0 +1,23 @@
+CONTRACT=AETHER_MASTER
+VERSION=1.0
+
+AUTHORITY=AETHER
+SCOPE=SYSTEM_WIDE
+
+BINDS:
+- docker
+- agents
+- automation
+- networks
+- volumes
+
+RULES:
+- All containers must attach to AETHERNET
+- All agents must declare identity
+- No process runs without contract reference
+- No external network access without explicit permission
+
+ENFORCEMENT=MANDATORY
+BREACH=TERMINATE
+
+STATUS=ACTIVE
