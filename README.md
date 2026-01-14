@@ -14,3 +14,37 @@ AETHERNET serves as the Source of Truth for all components in the stack. It gove
 ## Core Rules
 1. Local-first: Everything must run locally first.
 2. Versioned-only: If it’s not versioned here, it’s not real.
+# Add, commit, push
+git add README.md
+git commit -m "Add AETHER documentation"
+git push
+## Architecture
+
+```
+AETHERNET/
+├── agents/          # 50 specialized AI agents
+├── docker/          # Container configurations
+├── docs/            # Documentation
+└── core/            # Core system files
+```
+
+## Quick Start
+
+```bash
+# Clone repository
+git clone https://github.com/thematriculationcorpus/aethernet.git
+
+# Navigate to project
+cd aethernet
+
+# Run locally (Docker required)
+docker-compose up
+```
+
+## Agent Roster
+
+See [AGENT_ROSTER.md](AGENT_ROSTER.md) for complete agent documentation.
+
+## Status
+
+🚧 Active Development - Local-first, version-controlled system
