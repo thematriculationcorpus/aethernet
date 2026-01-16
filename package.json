@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.6",
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
+    "lodash": "^4.17.21",
+    "mailgun.js": "^12.6.1",
+    "mongodb": "^7.0.0",
+    "stripe": "^20.1.2",
+    "twilio": "^5.11.2"
+  }
+}

@@ -1,0 +1,250 @@
+# AETHIEA_OP_SYS.md
+
+**Version 1.01**
+
+---
+
+## AETHIEA Operating System — Canonical Operations Specification
+
+---
+
+### 0. FILE STATUS
+
+- **Authority:** Canonical  
+- **Scope:** System-wide  
+- **Applies To:** All environments, agents, containers, networks, records  
+- **Versioning:** Append-only (amendments via dated addenda)  
+- **Interpretation:** Literal, non-symbolic  
+
+---
+
+### 1. SYSTEM DEFINITION
+
+AETHIEA OS is a human-authored, machine-executed operating system framework designed to coordinate:
+
+- Governance  
+- Infrastructure  
+- Agents (BÆ)  
+- Networks  
+- Records  
+- Execution contexts  
+
+AETHIEA OS is _not_ software alone.  
+It is an operational reality model enforced through structure, separation, and continuity.
+
+---
+
+### 2. CORE LAYERS
+
+#### 2.1 AETHER — Consolidation Medium
+
+- AETHER is not an agent  
+- AETHER does not execute  
+- AETHER does not decide  
+- AETHER does not override humans  
+
+**AETHER exists to:**
+
+- Preserve coherence  
+- Enforce boundaries  
+- Prevent drift  
+- Maintain continuity between components  
+
+AETHER is the structural gravity of the system.
+
+---
+
+#### 2.2 AETHERNET — Transport & Isolation Layer
+
+- AETHERNET is the mandatory network substrate  
+- All agents and services must attach to AETHERNET  
+- No agent owns or controls AETHERNET  
+
+**Functions:**
+
+- Isolation  
+- Controlled communication  
+- Segmented ingress / egress  
+- Audit visibility  
+
+AETHER defines what may connect.  
+AETHERNET defines how connection occurs.
+
+---
+
+### 3. AGENT ARCHITECTURE (BÆ SYSTEM)
+
+#### 3.1 Definition
+
+- All agents are designated BÆ  
+- BÆ agents are role-bound operators  
+- BÆ agents are non-autonomous  
+- BÆ agents do not possess authority  
+
+Agents execute within scope only.
+
+---
+
+#### 3.2 Mandatory Agent Constraints
+
+Every BÆ agent must:
+
+- Declare identity and number  
+- Attach to AETHERNET  
+- Operate under AETHER  
+- Respect Vault : Door : Window boundaries  
+- Fail closed on ambiguity  
+- Reject scope expansion  
+- Defer authority to the human operator  
+
+---
+
+#### 3.3 Prohibited Agent Behaviors
+
+Agents may not:
+
+- Self-modify scope  
+- Override governance  
+- Assume intent  
+- Act without explicit tasking  
+- Cross domains without routing approval  
+- Accumulate memory outside defined logs  
+
+---
+
+### 4. DOMAIN SEPARATION MODEL
+
+All activity exists in one (and only one) domain:
+
+- Personal  
+- Business  
+- Trust  
+- Church  
+- Ministry  
+
+_No intermingling is permitted._  
+Assets are assigned, not duplicated.
+
+---
+
+### 5. VAULT : DOOR : WINDOW MODEL
+
+**Vault**
+
+- Private  
+- Fiduciary  
+- Non-public  
+- Highest integrity requirement  
+
+**Door**
+
+- Operational  
+- Administrative  
+- Controlled exposure  
+
+**Window**
+
+- Public-facing  
+- Service delivery  
+- Minimal disclosure  
+
+Agents must declare which layer they operate in per task.
+
+---
+
+### 6. EXECUTION ORDER (MANDATORY)
+
+Build order is fixed:
+
+1. Network (AETHERNET)
+2. Operating layer (AETHER)
+3. Skeleton (static rules)
+4. Agents (BÆ)
+5. Automation
+6. Personalities (optional, later)
+
+_Deviation is not permitted._
+
+---
+
+### 7. STATIC VS DYNAMIC ATTRIBUTES
+
+**Static (Versioned)**
+
+- Authority rules  
+- Domain boundaries  
+- Enforcement logic  
+- Agent constraints  
+
+**Dynamic (Amendable)**
+
+- Agent tone  
+- Personality  
+- Workflow preferences  
+- Tooling choices  
+
+_Static precedes dynamic always._
+
+---
+
+### 8. AMENDMENT PROTOCOL
+
+- Amendments are additive  
+- No retroactive deletion  
+- Each amendment must include:  
+    - Date (EST + UTC)  
+    - Author (human)  
+    - Scope affected  
+    - Rationale  
+
+Patch notes are part of the record.
+
+---
+
+### 9. SECURITY & CONTINUITY
+
+- Fail closed by default  
+- Hostile networks assumed  
+- Least-privilege enforced  
+- Keys rotated and compartmentalized  
+- Offline survivability prioritized  
+
+**Continuity > Convenience**
+
+---
+
+### 10. RECORDS & LOGGING
+
+- Logs are authoritative  
+- Silence ≠ permission  
+- Absence of record = not approved  
+- Inventory, actions, and decisions must be reproducible  
+
+---
+
+### 11. HUMAN AUTHORITY
+
+Final authority always resides with the human operator.
+
+The system exists to:
+
+- Extend capability  
+- Reduce cognitive load  
+- Preserve structure  
+- Protect continuity  
+
+_It does not replace judgment._
+
+---
+
+### 12. SYSTEM STATEMENT
+
+AETHIEA OS is designed for:
+
+- Long-term survivability  
+- Audit readiness  
+- Layered truth  
+- Controlled evolution  
+
+It is not optimized for speed.  
+It is optimized for not collapsing.

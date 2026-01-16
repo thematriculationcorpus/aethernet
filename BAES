@@ -1,0 +1,108 @@
+#!/bin/bash
+# === BAEBUILD.HER ===
+# BAEs'R'Us — Menu-driven Atomic Edit/Append Utility with Profile Overview
+
+set -e  # Exit on any error
+
+if [[ ! -d .git || ! -d BAEs ]]; then
+  echo "ERROR: Run me from your repo root (with .git and BAEs/)."
+  exit 1
+fi
+
+while :; do
+  echo "---------------------------------------------"
+  echo "  BAEBUILD.HER : BAEs'R'Us Agent Automation"
+  echo "---------------------------------------------"
+  echo "Choose an action:"
+  echo " (b) Build new agent"
+  echo " (u) Upgrade agent"
+  echo " (r) Replace files"
+  echo " (s) Sync to repo"
+  echo " (q) Quit"
+  read -p "Action? [b/u/r/s/q]: " MAINACT
+
+  case "$MAINACT" in
+    b|u|r)
+      read -p "Enter BAE Agent Number (e.g., 004): " BAENUM
+      BAEDIR="BAEs/BAE${BAENUM}"
+
+      # --- NEW SUBMENU ---
+      echo ""
+      echo "[A] Edit Agent  [P] Profile Overview  [S] Skip/Back"
+      read -p "Next action for BAE${BAENUM}? [a/p/s]: " SUBACT
+      case "$SUBACT" in
+        p|P)
+          READMEFILE="$BAEDIR/README.md"
+          echo "---------------------------------------------"
+          echo " BAE${BAENUM} : Profile Overview"
+          echo "---------------------------------------------"
+          if [[ -f "$READMEFILE" ]]; then
+            cat "$READMEFILE"
+          else
+            echo "(No README.md found for BAE${BAENUM})"
+          fi
+          echo "---------------------------------------------"
+          ;;
+        a|A)
+          read -p "Enter Agent Name (e.g., La'Bella The Programmer): " AGENTNAME
+          if [[ ! -d "$BAEDIR" ]]; then
+            echo "This is a new agent. Creating $BAEDIR."
+            mkdir -p "$BAEDIR"
+          fi
+
+          for FILE in README.md identity.yaml; do
+            AGENTFILE="$BAEDIR/$FILE"
+            if [[ ! -f "$AGENTFILE" ]]; then
+              echo "# Start your content for $FILE here:" > "$AGENTFILE"
+            fi
+            echo "Opening $AGENTFILE for editing."
+            ${EDITOR:-nano} "$AGENTFILE"
+          done
+
+          git add "$BAEDIR"
+          git commit -m "BAEBUILD.HER: $MAINACT for BAE:${BAENUM} (${AGENTNAME}) [BAEs'R'Us Federation]"
+          git push
+
+          echo ""
+          echo "🎉 BAEBUILD.HER: BAE:${BAENUM} delivered to repo!"
+
+          read -p "Append (a) note to agent log, or (s)kip? [a/s]: " ACT
+          if [[ "$ACT" == "a" ]]; then
+            LOGFILE="$BAEDIR/BAE${BAENUM}.log"
+            echo "# $(date '+%Y-%m-%d %H:%M') :: Nysus note" >> "$LOGFILE"
+            echo "Type your log note (end with Ctrl+D):"
+            cat >> "$LOGFILE"
+            git add "$LOGFILE"
+            git commit -m "BAEBUILD.HER: Appended post-delivery log for BAE:${BAENUM}"
+            git push
+            echo "Log appended and delivered."
+          else
+            echo "No log appended."
+          fi
+
+          echo ""
+          echo "Agent directory: https://github.com/thematriculationcorpus/aethernet/tree/main/$BAEDIR"
+          ;;
+        s|S)
+          continue
+          ;;
+        *)
+          echo "Invalid option."
+          ;;
+      esac
+      ;;
+    s)
+      echo "------ Syncing with remote repository... ------"
+      git pull --rebase
+      git status
+      echo "------ Sync complete! ------"
+      ;;
+    q)
+      echo "Exiting BAEBUILD.HER. All hail BAEs'R'Us Federation!"
+      exit 0
+      ;;
+    *)
+      echo "Invalid choice. Please select again."
+      ;;
+  esac
+done
