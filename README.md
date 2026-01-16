@@ -102,3 +102,4 @@ See [AGENT_ROSTER.md](AGENT_ROSTER.md) for complete agent documentation.
 
 🚧 Active Development - Local-first, version-controlled system
 [![BAE:005 Continuity Enforcement](https://img.shields.io/badge/BAE:005-Continuity%20Enforced-blueviolet)](./BAEs/BAE005/CONTINUITY.md)
+> 📚 Start with [d_ny5u5.md](d_ny5u5.md) for core operator/project standards.
