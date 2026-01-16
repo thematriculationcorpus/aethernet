@@ -1,0 +1,3 @@
+[submodule "aethernet"]
+	path = aethernet
+	url = git@github.com:thematriculationcorpus/aethernet.git
