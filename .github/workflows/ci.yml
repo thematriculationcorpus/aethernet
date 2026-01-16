@@ -1,0 +1,26 @@
+name: AETHERNET Shell Lint and File Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint-shell:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check Shell scripts
+        run: |
+          if command -v shellcheck >/dev/null 2>&1; then
+            find . -name "*.sh" -exec shellcheck {} +
+          else
+            echo "shellcheck not found, skipping lint"
+          fi
+      - name: Ensure BELLADEX.md exists
+        run: |
+          [ -f BELLADEX.md ] || (echo "BELLADEX.md missing!" && exit 1)
+      - name: Ensure d_ny5u5.md exists
+        run: |
+          [ -f d_ny5u5.md ] || (echo "d_ny5u5.md missing!" && exit 1)
