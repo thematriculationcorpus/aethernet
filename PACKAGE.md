@@ -1,26 +1,34 @@
-# AETHERNet — Package Declaration (Structure-Only)
+# STEP 12 — PACKAGE (LOCKED)
 
-Lifecycle Step: 12 — Package
+## Status
+**LOCKED · STRUCTURE-ONLY**
 
-This repository is a **packaged architectural system**.
-It defines structure, boundaries, and governance only.
+## Scope
+This step finalizes **structural artifacts only**.  
+No behavior, execution, automation, or dynamics are introduced here.
 
-No execution.
-No behavior.
-No automation.
+## Included Artifacts
+- Architecture layers (VAULT, DOOR, WINDOW, HABITAT, MONOCLE, AETHIE, AETHERNET, AETHER)
+- Books of Knowledge (AVOIDANCE, COMPLIANCE, ACCORDANCE)
+- Cross-layer maps (read-only)
+- Governance routing tables
+- Execution governance (gates, eligibility, audit, violation response)
+- Structural bindings and indices
 
-## Included
-- architecture/layers
-- architecture/books
-- architecture/maps
-- architecture/routing
-- architecture/execution
-- architecture/bindings
+## Explicit Exclusions
+- No runtime logic
+- No behavioral definitions
+- No automation
+- No agent personality, tone, or dynamics
+- No scope expansion
 
-## Excluded
-- Runtime logic
-- Autonomous agents
-- Decision systems
-- Enforcement mechanisms
+## Invariants
+- Package contents are immutable unless this lock is explicitly lifted
+- All documents are descriptive and non-executive
+- Any violation triggers fail-closed posture
 
-All components are descriptive and deny-by-default.
+## Transition Rule
+Advancement beyond this point constitutes entry into **Step 13 — System**  
+and requires an explicit, intentional unlock.
+
+**End of Step 12.**
