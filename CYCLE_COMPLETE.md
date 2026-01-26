@@ -1,14 +1,24 @@
-# AETHIEA Lifecycle — Sealed (0–16)
+# CYCLE COMPLETE — AETHIEA 0–16
 
-This document asserts completion of the structural lifecycle:
+## Declaration
+The AETHIEA lifecycle (Steps 0–16) is complete.
 
-0–16 are defined, scaffolded, and bound.
-No behavior is authorized.
-No automation is active.
+This repository now represents a fully scaffolded, non-executive,
+governance-first system architecture.
 
-Amendments require:
-- Explicit versioning
-- Human authority
-- Audit trail
+No further structural steps are pending in this cycle.
 
-This system is complete by design.
+## Scope of Completion
+- Layers
+- Books
+- Maps
+- Execution governance
+- Runtime scaffolding
+- Autonomy thresholds
+- Continuity
+- Perpetuities
+
+## Lock Statement
+No new structure may be added without opening a new cycle.
+
+Status: LOCKED
