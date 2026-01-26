@@ -1,1 +1,4 @@
 node_modules/\n*.log\n*.env\n.DS_Store
+
+# Runtime kill-switch flag (local only)
+runtime/control/KILL_SWITCH.ENABLED
