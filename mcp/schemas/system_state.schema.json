@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aethernet:mcp:system_state",
+  "title": "AETHERNet System State (read-only)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "cycle_status",
+    "autonomy_level",
+    "runtime_mode",
+    "last_commit",
+    "degraded_state"
+  ],
+  "properties": {
+    "cycle_status": { "type": "string" },
+    "autonomy_level": { "type": "string" },
+    "runtime_mode": { "type": "string" },
+    "last_commit": { "type": "string" },
+    "degraded_state": { "type": "boolean" }
+  }
+}
