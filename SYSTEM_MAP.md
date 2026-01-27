@@ -113,3 +113,8 @@ MCP is cleared as a **read / propose interface only**.
 ---
 
 End of document.
+
+## EVIDENCE
+- CI scope commit: 5371f63
+- MCP docs commit: a0e2027
+- Snapshot commit: d938917
