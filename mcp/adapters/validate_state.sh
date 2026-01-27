@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SCHEMA="mcp/schemas/system_state.schema.json"
 STATE="$(./mcp/adapters/local_state.sh)"
 
 echo "$STATE" | jq . >/dev/null
