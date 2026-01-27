@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "posture": "INERT",
+  "rules": {
+    "execution": "DENIED",
+    "authority": "HUMAN_ONLY",
+    "automation": "NONE"
+  },
+  "proposals": []
+}
