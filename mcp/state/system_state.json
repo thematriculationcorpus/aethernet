@@ -1,0 +1,7 @@
+{
+  "cycle_status": "SCAFFOLDING",
+  "autonomy_level": "HUMAN_ONLY",
+  "runtime_mode": "READ_ONLY",
+  "last_commit": "$(git rev-parse HEAD)",
+  "degraded_state": false
+}
