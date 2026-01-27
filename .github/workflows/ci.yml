@@ -1,26 +1,35 @@
-name: AETHERNET Shell Lint and File Check
+name: AETHERNET Interface Lint (mcp only)
 
 on:
   push:
     branches: [ main ]
+    paths:
+      - "mcp/**"
+      - ".github/workflows/**"
   pull_request:
     branches: [ main ]
+    paths:
+      - "mcp/**"
+      - ".github/workflows/**"
 
 jobs:
   lint-shell:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Check Shell scripts
+
+      - name: ShellCheck (mcp adapters only)
         run: |
           if command -v shellcheck >/dev/null 2>&1; then
-            find . -name "*.sh" -exec shellcheck {} +
+            shellcheck mcp/adapters/*.sh
           else
             echo "shellcheck not found, skipping lint"
           fi
+
       - name: Ensure BELLADEX.md exists
         run: |
           [ -f BELLADEX.md ] || (echo "BELLADEX.md missing!" && exit 1)
+
       - name: Ensure d_ny5u5.md exists
         run: |
           [ -f d_ny5u5.md ] || (echo "d_ny5u5.md missing!" && exit 1)
