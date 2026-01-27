@@ -25,4 +25,4 @@ Structure only. No behavior. No execution.
 
 ## Lifecycle
 - System follows the canonical 0–16 lifecycle
-- Current state: Step 12 — Package
+- Current state: Step 6 — Scaffolding
