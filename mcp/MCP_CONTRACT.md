@@ -7,7 +7,8 @@ Scope: mcp/
 ---
 
 ## PURPOSE
-Define the immutable contract for the MCP interface. This document governs how tools may *interact* with MCP, not how MCP executes actions.
+Define the immutable contract for the MCP interface.  
+Interaction only — never execution.
 
 ---
 
@@ -19,38 +20,9 @@ Define the immutable contract for the MCP interface. This document governs how t
 ---
 
 ## DENIED (ABSOLUTE)
-- Execution of commands
-- Dispatch of actions
-- Side effects (filesystem, network, process)
+- Command execution
+- Side effects
 - Authority escalation
 - Background operation
-
----
-
-## INPUTS
-- Files under `mcp/state/`
-- Schemas under `mcp/schemas/`
-
----
-
-## OUTPUTS
-- Observations (stdout only)
-- Proposal entries written to `mcp/state/proposals.json`
-
----
-
-## GUARANTEES
-- Fail-closed by default
-- Human approval required for any action
-- Schema validation precedes acceptance
-- No automation without explicit promotion
-
----
-
-## NON-GOALS
-- Task execution
-- Scheduling
-- Autonomy
-- Orchestration
 
 End of contract.
